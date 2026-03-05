@@ -4,46 +4,126 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects | Pratiksha</title>
+    <title>Pratiksha Tripathi | Projects</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+    <!-- Navbar -->
     <header>
-        <nav>
-            <h1>Pratiksha</h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+        <div class="navbar container">
+            <a href="index.html" class="navbar-brand text-gradient">Pratiksha.</a>
+            <ul class="navbar-nav">
+                <li><a href="index.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="resume.pdf" class="btn-custom" style="padding: 10px 20px; font-size: 0.9rem;"
+                        download>Resume</a></li>
             </ul>
-        </nav>
-    </header>
-<main class="projects">
-    <h2 data-aos="fade-up" style="color: #eee;">✨ My Projects</h2>
-</main>
-
-    <main class="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>CI/CD Portfolio Deployment</h3>
-                <p>Automated portfolio deployment using GitHub Actions and AWS S3.</p>
-                <a href="#">View Project</a>
-            </div>
-            <div class="project-card" data-aos="zoom-in">
-
-            <div class="project-card">
-                <h3>NoteNest</h3>
-                <p> A Personal Note-Taking Web App.</p>
-                <a href="#">View Project</a>
-            </div>
         </div>
+    </header>
+
+    <main>
+        <section class="projects section container" id="projects">
+            <h2 class="section-heading" data-aos="fade-right"><span class="text-gradient">Featured Work</span></h2>
+            <p style="color: var(--text-muted); margin-top:-40px; margin-bottom: 80px;" data-aos="fade-up">A collection
+                of algorithms, predictive models, and full-stack applications.</p>
+
+            <!-- Featured Project 1 -->
+            <div class="featured-project" data-aos="fade-up">
+                <div class="project-content">
+                    <p class="project-overline text-gradient">Real-Time AI System</p>
+                    <h3 class="project-title">Smart Campus Attendance System</h3>
+                    <div class="project-desc">
+                        <p>Designed and documented an end-to-end full-stack smart campus attendance system. It utilizes
+                            real-time AI-based face recognition to automate and digitize classroom attendance,
+                            integrated seamlessly with a real-time analytical dashboard for tracking trends.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>PostgreSQL</li>
+                        <li>DeepFace</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/pratikshatripathi13/University-Smart-Attendance-Management-System-.git"
+                            target="_blank" aria-label="GitHub Link"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <i class="fas fa-users-viewfinder"></i>
+                </div>
+            </div>
+
+            <!-- Featured Project 2 -->
+            <div class="featured-project" data-aos="fade-up">
+                <div class="project-content">
+                    <p class="project-overline text-gradient">Machine Learning Pipeline</p>
+                    <h3 class="project-title">Flight Price Predictive Analytics</h3>
+                    <div class="project-desc">
+                        <p>Built a comprehensive machine learning pipeline that significantly improves flight price
+                            prediction accuracy by 25%. This was achieved through advanced feature engineering, label
+                            encoding, and a highly scalable real-time inference architecture built with Python and
+                            Pandas.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>Python</li>
+                        <li>Pandas</li>
+                        <li>Scikit-Learn</li>
+                        <li>Streamlit</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/pratikshatripathi13/FLIGHT-PRICE-PREDICTIVE-ANALYSIS.git"
+                            target="_blank" aria-label="GitHub Link"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <i class="fas fa-plane-departure"></i>
+                </div>
+            </div>
+
+            <!-- Featured Project 3 -->
+            <div class="featured-project" data-aos="fade-up">
+                <div class="project-content">
+                    <p class="project-overline text-gradient">Creative Tooling</p>
+                    <h3 class="project-title">ASCII Art Visualizer Project</h3>
+                    <div class="project-desc">
+                        <p>Developed a fun, creative C++ terminal application that dynamically converts raw image data
+                            or user-defined structured patterns into highly recognizable, terminal-based ASCII art
+                            visual representations.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>C++</li>
+                        <li>Graphics Context</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/pratikshatripathi13/ASCII-ART-PROJECT.git" target="_blank"
+                            aria-label="GitHub Link"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <i class="fas fa-font"></i>
+                </div>
+            </div>
+
+        </section>
     </main>
 
     <footer>
-        <p>© 2025 Pratiksha</p>
+        <div class="container">
+            <p>© 2025 Pratiksha Tripathi | Designed with ❤️ & Code</p>
+        </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
 </body>
 
 </html>
