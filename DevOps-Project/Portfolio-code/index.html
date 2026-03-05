@@ -2,90 +2,115 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pratiksha Tripathi | Portfolio</title>
 
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="style.css" />
-
-
-  <!-- Custom Styles -->
- 
 </head>
 
 <body>
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Pratiksha's Portfolio</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
+  <header>
+    <div class="navbar container">
+      <a href="index.html" class="navbar-brand text-gradient">Pratiksha.</a>
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="nav-link active">About</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="resume.pdf" class="btn-custom" style="padding: 10px 20px; font-size: 0.9rem;" download>Resume</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section (Animated Typing) -->
+    <section class="hero container" id="home">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <h1>Hey! I'm <span class="text-gradient">Pratiksha</span></h1>
+
+        <!-- The Animated Typing Text -->
+        <h2><span id="typed-text"></span></h2>
+
+        <p>
+          I'm a software engineer and data analyst specializing in building exceptional digital experiences,
+          AI-driven tools, and robust backend architectures. Currently, I'm focused on Cloud Computing and Python
+          development.
+        </p>
+
+        <a href="projects.html" class="btn-custom">
+          View My Work
+        </a>
       </div>
-    </div>
-  </nav>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="container">
+    <!-- About Section Extracted from CV -->
+    <section class="section container" id="about">
+      <h2 class="section-heading" data-aos="fade-right"><span class="text-gradient">About Me</span></h2>
 
-      <h1>Hey! I'm <span class="text-info">Pratiksha</span></h1>
-      <h2><span id="typed-text"></span></h2>
-      <p class="lead mt-3">Engineer | Python Developer | Data Analyst | Future Project Manager</p>
-      <a href="resume.pdf" class="btn btn-custom" download>Download Resume</a>
-    </div>
-  </section>
+      <div class="about-grid">
+        <div class="text-col" data-aos="fade-up">
+          <p>
+            Hello! My name is Pratiksha and I enjoy creating things that live on the internet. My interest in software
+            development started back when I began solving complex algorithmic problems, which eventually led me to earn
+            a <strong class="text-gradient">4-Star rating in Python on HackerRank</strong> and solve over 200+ LeetCode
+            problems.
+          </p>
+          <p>
+            I am currently pursuing my <strong>B.Tech in Computer Science and Engineering</strong> at Lovely
+            Professional University.
+            Recently, I've been heavily involved in <strong>Cloud Computing, AWS Architecture, and Data
+              Analytics</strong>,
+            completing serious training simulations with Deloitte and earning the prestigious <strong>Infosys STEM
+              Scholar Award</strong>.
+          </p>
+          <p>Here are a few technologies I've been working with recently:</p>
 
-  <!-- Skills Section -->
-  <section class="skills text-center" id="skills">
-    <div class="container">
-      <h2 data-aos="fade-up">My Skills</h2>
-      <div class="row g-4 mt-4">
-        <div class="col-sm-6 col-md-4" data-aos="zoom-in">
-          <div class="skill-card"><i class="fab fa-python me-2"></i> Python</div>
+          <ul class="skills-list">
+            <li>Python & C++</li>
+            <li>Django & Flask</li>
+            <li>PostgreSQL & SQL</li>
+            <li>AWS (EC2, S3, IAM)</li>
+            <li>Pandas & Scikit-learn</li>
+            <li>Data Visualization</li>
+          </ul>
         </div>
-        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="skill-card"><i class="fas fa-code me-2"></i> C++</div>
-        </div>
-        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="skill-card"><i class="fas fa-table me-2"></i> Excel</div>
-        </div>
-        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="300">
-          <div class="skill-card"><i class="fab fa-java me-2"></i> Java Web</div>
-        </div>
-        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="400">
-          <div class="skill-card"><i class="fas fa-terminal me-2"></i> Command Line</div>
-        </div>
-        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="500">
-          <div class="skill-card"><i class="fas fa-chart-bar me-2"></i> Data Visualization</div>
+
+        <div class="image-col" data-aos="fade-left">
+          <div class="image-border">
+            <i class="fas fa-terminal"></i>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Pratiksha | All rights reserved</p>
+    <div class="container">
+      <p>© 2025 Pratiksha Tripathi | Designed with ❤️ & Code</p>
+    </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
-    AOS.init();
+    AOS.init({ duration: 800, once: true, offset: 50 });
+
+    // Smooth Typing Animation
     const typed = new Typed("#typed-text", {
-      strings: ["Python Developer", "C++ Programmer", "Data Analyst", "Project Manager"],
+      strings: [
+        "Software Developer",
+        "Machine Learning Engineer",
+        "Data Analyst",
+        "Cloud Enthusiast"
+      ],
       typeSpeed: 60,
       backSpeed: 40,
+      backDelay: 1500,
       loop: true,
     });
   </script>
