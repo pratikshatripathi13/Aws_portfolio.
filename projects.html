@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pratiksha Tripathi | Projects</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader-text">Pratiksha.</div>
+        <div class="loader-bar"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Parallax BG -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+    <!-- Navbar -->
+    <header>
+        <div class="navbar container">
+            <a href="index.html" class="navbar-brand text-gradient">Pratiksha.</a>
+            <ul class="navbar-nav">
+                <li><a href="index.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button></li>
+                <li><a href="resume.pdf" class="btn-custom" style="padding: 10px 20px; font-size: 0.9rem;"
+                        download><span>Resume</span></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="projects section container" id="projects">
+            <h2 class="section-heading" data-aos="fade-right"><span class="text-gradient">Featured Work</span></h2>
+            <p style="color: var(--text-muted); margin-top:-40px; margin-bottom: 80px;" data-aos="fade-up">A collection
+                of algorithms, predictive models, and full-stack applications.</p>
+
+            <!-- Project Filters -->
+            <div class="projects-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI / ML</button>
+                <button class="filter-btn" data-filter="web">Web & Cloud</button>
+            </div>
+
+            <!-- Featured Project 1 -->
+            <div class="featured-project" data-aos="fade-up" data-category="ai web">
+                <div class="project-content">
+                    <p class="project-overline text-gradient">Real-Time AI System</p>
+                    <h3 class="project-title">Smart Campus Attendance System</h3>
+                    <div class="project-desc">
+                        <p>Designed and documented an end-to-end full-stack smart campus attendance system. It utilizes
+                            real-time AI-based face recognition to automate and digitize classroom attendance,
+                            integrated seamlessly with a real-time analytical dashboard for tracking trends.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>PostgreSQL</li>
+                        <li>DeepFace</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/pratikshatripathi13/University-Smart-Attendance-Management-System-.git"
+                            target="_blank" aria-label="GitHub Link" class="view-code-card">
+                            <span class="emoji">🤓👉</span>
+                            <span>View Code</span>
+                            <i class="fab fa-github" style="margin-left: 10px;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80" alt="Smart Campus Attendance System" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Featured Project 2 -->
+            <div class="featured-project" data-aos="fade-up" data-category="ai">
+                <div class="project-content">
+                    <p class="project-overline text-gradient">Machine Learning Pipeline</p>
+                    <h3 class="project-title">Flight Price Predictive Analytics</h3>
+                    <div class="project-desc">
+                        <p>Built a comprehensive machine learning pipeline that significantly improves flight price
+                            prediction accuracy by 25%. This was achieved through advanced feature engineering, label
+                            encoding, and a highly scalable real-time inference architecture built with Python and
+                            Pandas.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>Python</li>
+                        <li>Pandas</li>
+                        <li>Scikit-Learn</li>
+                        <li>Streamlit</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/pratikshatripathi13/FLIGHT-PRICE-PREDICTIVE-ANALYSIS.git"
+                            target="_blank" aria-label="GitHub Link" class="view-code-card">
+                            <span class="emoji">🤓👉</span>
+                            <span>View Code</span>
+                            <i class="fab fa-github" style="margin-left: 10px;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Flight Price Predictive Analytics" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Featured Project 3: CI/CD Portfolio -->
+            <div class="featured-project" data-aos="fade-up" data-category="web">
+                <div class="project-content">
+                    <p class="project-overline text-gradient">Cloud DevOps</p>
+                    <h3 class="project-title">CI/CD Portfolio Pipeline</h3>
+                    <div class="project-desc">
+                        <p>Deployed a personal portfolio using HTML, CSS, and AWS S3 static hosting ensuring reliable
+                            cloud availability. Automated CI/CD pipelines via GitHub Actions for continuous integration
+                            and streamlined deployments to AWS S3 with minimal manual intervention, using structured
+                            Git workflows for maintainability.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>HTML / CSS</li>
+                        <li>AWS S3</li>
+                        <li>GitHub Actions</li>
+                        <li>Git</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/pratikshatripathi13"
+                            target="_blank" aria-label="GitHub Link" class="view-code-card">
+                            <span class="emoji">😎👉</span>
+                            <span>View Code</span>
+                            <i class="fab fa-github" style="margin-left: 10px;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=800&q=80" alt="CI/CD Portfolio Pipeline" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Featured Project 4: Government Scheme RAG -->
+            <div class="featured-project" data-aos="fade-up" data-category="ai">
+                <div class="project-content">
+                    <p class="project-overline text-gradient">Generative AI · RAG</p>
+                    <h3 class="project-title">Government Scheme RAG System</h3>
+                    <div class="project-desc">
+                        <p>Built a Retrieval-Augmented Generation (RAG) pipeline that lets citizens query government
+                            schemes in natural language. The system indexes scheme documents, retrieves the most
+                            relevant chunks via vector similarity search, and feeds them as context to an LLM
+                            to generate accurate, grounded answers in real-time — bridging the gap between citizens
+                            and public welfare information.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>Python</li>
+                        <li>LangChain</li>
+                        <li>Vector Search</li>
+                        <li>LLM</li>
+                        <li>RAG Pipeline</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/pratikshatripathi13/government_scheme_RAG.git"
+                            target="_blank" aria-label="GitHub Link" class="view-code-card">
+                            <span class="emoji">🤓👉</span>
+                            <span>View Code</span>
+                            <i class="fab fa-github" style="margin-left: 10px;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Government Scheme RAG System" loading="lazy">
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Pratiksha Tripathi | Designed with ❤️ & Code</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
