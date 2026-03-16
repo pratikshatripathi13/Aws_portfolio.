@@ -116,4 +116,24 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    /* ═══════════════════════════════════════════════
+       5. AVATAR SPEECH BUBBLE LOGIC
+    ═══════════════════════════════════════════════ */
+    const speechBubble = document.getElementById('avatar-speech');
+    
+    if (speechBubble) {
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY;
+            
+            if (scrollPos > 300 && scrollPos < 1200) {
+                speechBubble.innerHTML = "I specialize in cloud computing and data analytics.";
+            } else if (scrollPos >= 1200) {
+                speechBubble.innerHTML = "Here's more about my background and skills!";
+            } else {
+                speechBubble.innerHTML = "Welcome to my digital workspace! 👋";
+            }
+        });
+    }
+
 });

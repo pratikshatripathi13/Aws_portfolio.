@@ -39,7 +39,8 @@
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="certificates.html" class="nav-link active">Certificates</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button></li>
+                <li><button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i
+                            class="fas fa-sun"></i></button></li>
                 <li><a href="resume.pdf" class="btn-custom" style="padding: 10px 20px; font-size: 0.9rem;"
                         download><span>Resume</span></a></li>
             </ul>
@@ -48,14 +49,16 @@
 
     <main>
         <section class="section container" id="certificates">
-            <h2 class="section-heading" data-aos="fade-right"><span class="text-gradient">Certificates &
+
+            <h2 class="section-heading" data-aos="fade-right"><span class="text-gradient">Certificates &amp;
                     Achievements</span></h2>
-            <p class="certs-intro" data-aos="fade-up">
+            <p class="certs-intro" data-aos="fade-up" style="font-size: 1.15rem; font-weight: 500; color: var(--text-muted); line-height: 1.8; margin-bottom: 60px;">
                 A collection of professional certifications, virtual internships, and recognition awards I've earned
                 across Cloud Computing, Data Analytics, and Software Engineering.
             </p>
 
-            <div class="certs-grid">
+
+            <div class="certs-grid" style="margin-top: 60px;">
 
                 <!-- Excel to Power BI – Coursera -->
                 <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
@@ -167,49 +170,69 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="section container" id="achievements" style="padding-top: 0;">
+            <h2 class="section-heading" data-aos="fade-right" style="font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); letter-spacing: -1px; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 20px;">
+                <span style="font-style: italic; font-weight: 600;" class="text-gradient">Achievements.</span>
+            </h2>
+            
+            <div class="achievements-list">
+                
                 <!-- Infosys STEM Scholar -->
-                <div class="cert-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="cert-icon-wrap cert-infosys">
+                <div class="achievement-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="ach-icon-wrap" style="background: rgba(255, 183, 3, 0.05); color: #ffb703; border-color: rgba(255, 183, 3, 0.15);">
                         <i class="fas fa-award"></i>
                     </div>
-                    <div class="cert-body">
-                        <span class="cert-issuer">Infosys Foundation</span>
-                        <h3 class="cert-title">STEM Scholar Award</h3>
-                        <p class="cert-desc">Recognised as an Infosys STEM Scholar — a prestigious award
-                            acknowledging academic excellence and technical aptitude in computer science.</p>
-                        <div class="cert-tags">
-                            <span>Scholarship</span><span>STEM</span><span>Achievement</span>
-                        </div>
-                    </div>
-                    <div class="cert-footer">
-                        <span class="cert-badge"><i class="fas fa-star"></i> Aug 2023</span>
+                    <div class="ach-body">
+                        <span class="ach-issuer">INFOSYS FOUNDATION</span>
+                        <h3 class="ach-title">STEM Scholar Award</h3>
+                        <p class="ach-desc">Recognised for academic excellence & technical aptitude in CS</p>
                     </div>
                 </div>
 
                 <!-- HackerRank Python 4-Star -->
-                <div class="cert-card" data-aos="fade-up" data-aos-delay="480">
-                    <div class="cert-icon-wrap cert-leetcode">
+                <div class="achievement-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ach-icon-wrap" style="background: rgba(168, 85, 247, 0.05); color: var(--accent-purple); border-color: rgba(168, 85, 247, 0.15);">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="ach-body">
+                        <span class="ach-issuer">HACKERRANK</span>
+                        <h3 class="ach-title">4-Star Python Badge</h3>
+                        <p class="ach-desc">Advanced-level Python challenges · Mar 2024</p>
+                        <a href="https://www.hackerrank.com/pratikshatripathi13" target="_blank" class="ach-link">View Profile <i class="fas fa-external-link-alt" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                    </div>
+                </div>
+
+                <!-- 250+ Coding Problems -->
+                <div class="achievement-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="ach-icon-wrap" style="background: rgba(0, 242, 254, 0.05); color: var(--accent-blue); border-color: rgba(0, 242, 254, 0.15);">
                         <i class="fas fa-code"></i>
                     </div>
-                    <div class="cert-body">
-                        <span class="cert-issuer">HackerRank</span>
-                        <h3 class="cert-title">4-Star Python Badge</h3>
-                        <p class="cert-desc">Achieved a 4-star rating in Python on HackerRank by solving 200+
-                            algorithmic and data structure challenges at an advanced level.</p>
-                        <div class="cert-tags">
-                            <span>Python</span><span>DSA</span><span>Problem Solving</span>
-                        </div>
+                    <div class="ach-body">
+                        <span class="ach-issuer">LEETCODE · HACKERRANK · GFG</span>
+                        <h3 class="ach-title">250+ Problems Solved</h3>
+                        <p class="ach-desc">Consistent DSA & algorithmic problem-solving across platforms</p>
                     </div>
-                    <div class="cert-footer">
-                        <span class="cert-badge"><i class="fas fa-star"></i> Mar 2024</span>
-                        <a href="https://www.hackerrank.com/pratikshatripathi13" target="_blank" class="cert-link">
-                            <i class="fas fa-external-link-alt"></i> View
-                        </a>
+                </div>
+
+                <!-- Open Source GSSoC -->
+                <div class="achievement-item" style="border-bottom: none;" data-aos="fade-up" data-aos-delay="300">
+                    <div class="ach-icon-wrap" style="background: rgba(147, 165, 207, 0.05); color: #93a5cf; border-color: rgba(147, 165, 207, 0.15);">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="ach-body">
+                        <span class="ach-issuer">GSSOC — GIRL SCRIPT SUMMER OF CODE</span>
+                        <h3 class="ach-title">Open Source Contributor Badge</h3>
+                        <p class="ach-desc">Contributed to open source and received contributor badge · Sep 2025</p>
                     </div>
                 </div>
 
             </div>
         </section>
+
     </main>
 
     <footer>
