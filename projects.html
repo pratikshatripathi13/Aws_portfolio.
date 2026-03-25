@@ -35,12 +35,20 @@
             <a href="index.html" class="navbar-brand text-gradient">Pratiksha.</a>
             <ul class="navbar-nav">
                 <li><a href="index.html" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
                 <li><a href="projects.html" class="nav-link active">Projects</a></li>
                 <li><a href="certificates.html" class="nav-link">Certificates</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li><button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button></li>
-                <li><a href="resume.pdf" class="btn-custom" style="padding: 10px 20px; font-size: 0.9rem;"
-                        download><span>Resume</span></a></li>
+                <li class="dropdown-wrapper">
+                    <button class="btn-custom btn-resume" style="padding: 10px 22px; font-size: 0.95rem; font-weight: 800; border: 2px solid var(--text-main); cursor: pointer;">
+                        <span>Resume <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 4px;"></i></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="resume.pdf" download><i class="fas fa-file-pdf" style="color: #6366f1;"></i> Portfolio CV</a>
+                        <a href="real_cv.pdf" download><i class="fas fa-file-alt" style="color: #ec4899;"></i> Main CV</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </header>

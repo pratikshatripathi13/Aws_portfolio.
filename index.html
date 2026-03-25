@@ -2,309 +2,761 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pratiksha Tripathi | Portfolio</title>
-  <meta name="description"
-    content="Pratiksha Tripathi – Software Engineer, Data Analyst & Cloud Enthusiast. B.Tech CSE at LPU." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pratiksha Tripathi | Portfolio</title>
+    <meta name="description"
+        content="Pratiksha Tripathi – Software Engineer, Data Analyst & Cloud Enthusiast. B.Tech CSE at LPU." />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-  <!-- Devicons for tech logos -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
-  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <!-- Devicons for tech logos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <div class="theme-bg-layer"></div>
 
-  <!-- Preloader -->
-  <div class="preloader">
-    <div class="loader-text">Pratiksha.</div>
-    <div class="loader-bar"></div>
-  </div>
+    <!-- Luxury Welcome Experience (Splash Screen) -->
+    <div id="splash-screen" class="splash-screen">
+        <!-- Animated Background Orbs (Synced with Theme) -->
+        <div class="splash-bg-orb splash-orb-1"></div>
+        <div class="splash-bg-orb splash-orb-2"></div>
+        <div class="splash-bg-orb splash-orb-3"></div>
+        
+        <div class="noise-overlay"></div>
+        <div class="splash-content">
+            <div class="splash-header">
+                <h1 class="splash-brand-main">WELCOME</h1>
+            </div>
+            
+            <div class="splash-paths-container">
+                <div class="path-card path-light" onclick="choosePath('light')">
+                    <div class="path-icon"><i class="fas fa-sun"></i></div>
+                    <span class="path-label">ILLUMINATE</span>
+                    <span class="path-hint">Light Bloom Theory</span>
+                </div>
 
-  <!-- Custom Cursor -->
-  <div class="cursor-dot" data-cursor-dot></div>
-  <div class="cursor-outline" data-cursor-outline></div>
+                <div class="path-divider"></div>
 
-  <!-- Parallax BG -->
-  <div class="bg-orbs">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-  </div>
-
-  <!-- Navbar -->
-  <header>
-    <div class="navbar container">
-      <a href="index.html" class="navbar-brand text-gradient">Pratiksha.</a>
-      <ul class="navbar-nav">
-        <li><a href="index.html" class="nav-link active">About</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="certificates.html" class="nav-link">Certificates</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <li><button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button></li>
-        <li><a href="resume.pdf" class="btn-custom" style="padding: 10px 20px; font-size: 0.9rem;" download><span>Resume</span></a>
-        </li>
-      </ul>
+                <div class="path-card path-dark" onclick="choosePath('dark')">
+                    <div class="path-icon"><i class="fas fa-moon"></i></div>
+                    <span class="path-label">SHADOW</span>
+                    <span class="path-hint">The Obsidian Void</span>
+                </div>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero container" id="home">
-      <div class="hero-content">
-        <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
-            <h1>Hi, I'm <span class="text-gradient">Pratiksha</span></h1>
-            <h2><span id="typed-text"></span></h2>
-            <p>
-            I build intelligent applications and data-driven systems using Python, machine learning, and scalable backend technologies. My work focuses on transforming data into practical software solutions.
-            </p>
-            <p>
-            Built AI attendance systems, ML prediction models, and interactive data dashboards using Python, Django, and Scikit-Learn.
-            </p>
-        </div>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
 
-        <div class="hero-visual" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
-            <div class="avatar-container">
-                <!-- Abstract Glow & Grid Background -->
-                <div class="avatar-glow"></div>
-                <div class="avatar-grid-bg"></div>
-                
-                <!-- Main Avatar -->
-                <img src="waving_girl_cartoon.png" alt="Pratiksha Avatar Waving" class="hero-avatar floating-avatar" />
-
-                <!-- Speech Bubble -->
-                <div class="avatar-speech-bubble" id="avatar-speech">
-                    Welcome to my digital workspace! 👋
-                </div>
-
-                <!-- Floating Tech Tags -->
-                <div class="floating-tech tech-tag-1 floating-element delay-2"><i class="devicon-python-plain colored"></i> Python</div>
-                <div class="floating-tech tech-tag-2 floating-element delay-3"><i class="devicon-django-plain colored" style="color: #092e20;"></i> Django</div>
-                <div class="floating-tech tech-tag-3 floating-element delay-4"><i class="devicon-pandas-original colored"></i> Pandas</div>
-                <div class="floating-tech tech-tag-4 floating-element delay-5"><i class="fas fa-brain" style="color: var(--accent-purple);"></i> Machine Learning</div>
-                <div class="floating-tech tech-tag-5 floating-element delay-6"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
-
-                <!-- Avatar Action Dock (Integrated Buttons) -->
-                <div class="avatar-action-dock floating-element delay-1">
-                    <a href="projects.html" class="btn-custom" style="padding: 10px 20px; font-size: 0.85rem;"><span>View My Work</span> <i class="fas fa-arrow-right"></i></a>
-                    <a href="contact.html" class="btn-outline" style="padding: 10px 20px; font-size: 0.85rem;"><span>Get In Touch</span></a>
-                </div>
-            </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section container" id="about">
-      <div class="about-grid">
-        <div class="text-col" data-aos="fade-up">
-          <h2 class="section-heading" data-aos="fade-right"><span class="text-gradient" style="margin-left: 0;">About Me</span></h2>
-          <p>
-            Hello! My name is Pratiksha and I enjoy creating things that live on the internet. My interest in software
-            development started back when I began solving complex algorithmic problems, which eventually led me to earn
-            a <strong>4-Star rating in Python on HackerRank</strong> and solve over 200+ LeetCode
-            problems.
-          </p>
-          <p>
-            I am currently pursuing my <strong>B.Tech in Computer Science and Engineering</strong> at Lovely
-            Professional University.
-            Recently, I've been heavily involved in <strong>Cloud Computing, AWS Architecture, and Data
-              Analytics</strong>,
-            completing serious training simulations with Deloitte and earning the prestigious <strong>Infosys STEM
-              Scholar Award</strong>.
-          </p>
-
-          <!-- CGPA Badge -->
-          <div class="cgpa-badge" data-aos="zoom-in" data-aos-delay="200">
-            <div class="cgpa-inner">
-              <span class="cgpa-label">Academic CGPA</span>
-              <span class="cgpa-value">8.46 <span class="cgpa-max">/ 10</span></span>
-              <span class="cgpa-sub">B.Tech CSE · LPU</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="image-col" data-aos="fade-left">
-          <div class="image-border">
-            <img src="profile.png?v=1" alt="Pratiksha Tripathi" class="profile-photo" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section container" id="skills">
-      <h2 class="section-heading" data-aos="fade-right"><span class="text-gradient">Skills & Technologies</span></h2>
-
-      <div class="skills-grid">
-
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="0">
-          <div class="skill-icon"><i class="devicon-python-plain colored"></i></div>
-          <span class="skill-name">Python</span>
-        </div>
-
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="60">
-          <div class="skill-icon"><i class="devicon-cplusplus-plain colored"></i></div>
-          <span class="skill-name">C++</span>
-        </div>
-
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="120">
-          <div class="skill-icon"><i class="devicon-django-plain colored"></i></div>
-          <span class="skill-name">Django</span>
-        </div>
-
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="180">
-          <div class="skill-icon"><i class="devicon-flask-original colored"></i></div>
-          <span class="skill-name">Flask</span>
-        </div>
-
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="240">
-          <div class="skill-icon"><i class="devicon-postgresql-plain colored"></i></div>
-          <span class="skill-name">PostgreSQL</span>
-        </div>
-
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-          <div class="skill-icon"><i class="devicon-mysql-plain colored"></i></div>
-          <span class="skill-name">MySQL</span>
-        </div>
-
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="360">
-          <div class="skill-icon"><i class="devicon-amazonwebservices-original colored"></i></div>
-          <span class="skill-name">AWS</span>
-        </div>
-
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="420">
-          <div class="skill-icon"><i class="devicon-pandas-original colored"></i></div>
-          <span class="skill-name">Pandas</span>
-        </div>
-
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="480">
-          <div class="skill-icon"><i class="devicon-scikitlearn-plain colored"></i></div>
-          <span class="skill-name">Scikit-learn</span>
-        </div>
-
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="540">
-          <div class="skill-icon"><i class="devicon-git-plain colored"></i></div>
-          <span class="skill-name">Git</span>
-        </div>
-
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
-          <div class="skill-icon"><i class="devicon-github-original colored"></i></div>
-          <span class="skill-name">GitHub</span>
-        </div>
-
-        <div class="skill-card" data-aos="zoom-in" data-aos-delay="660">
-          <div class="skill-icon"><i class="devicon-jupyter-plain-wordmark colored"></i></div>
-          <span class="skill-name">Jupyter</span>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Education & Training Timeline Section -->
-    <section class="section container" id="experience">
-      <h2 class="section-heading" data-aos="fade-right"><span class="text-gradient">Education &amp; Training</span></h2>
-      
-      <div class="timeline-section">
-        <!-- Education Column -->
-        <div class="timeline-column" data-aos="fade-up">
-            <h3 class="timeline-title"><i class="fas fa-graduation-cap"></i> Education</h3>
-            <div class="timeline">
-                
-                <!-- BTech -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-date">August 2023 - Present</span>
-                    <div class="timeline-content">
-                        <h3>Lovely Professional University</h3>
-                        <h4>B.Tech in Computer Science and Engineering</h4>
-                        <p>Currently pursuing my Bachelor's degree with a focus on core software engineering principles, algorithms, and cloud technologies.</p>
-                        <span class="timeline-grade">CGPA: 8.46</span>
-                    </div>
-                </div>
-
-                <!-- 12th -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-date">April 2021 - March 2022</span>
-                    <div class="timeline-content">
-                        <h3>PN National Public School</h3>
-                        <h4>Intermediate (12th Grade)</h4>
-                        <p>Completed higher secondary education focusing on Physics, Chemistry, and Mathematics.</p>
-                        <span class="timeline-grade">Percentage: 93.4%</span>
-                    </div>
-                </div>
-
-                <!-- 10th -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-date">April 2019 - March 2020</span>
-                    <div class="timeline-content">
-                        <h3>PN National Public School</h3>
-                        <h4>Matriculation (10th Grade)</h4>
-                        <p>Completed secondary education with a strong foundation in science and mathematics.</p>
-                        <span class="timeline-grade">Percentage: 88.0%</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Experience/Training Column -->
-        <div class="timeline-column" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="timeline-title"><i class="fas fa-briefcase"></i> Experience</h3>
-            <div class="timeline">
-                
-                <!-- Summer Training -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-date">June 2025 - July 2025</span>
-                    <div class="timeline-content">
-                        <h3>Cipher Schools</h3>
-                        <h4>Cloud Computing - AWS Summer Training</h4>
-                        <p>Completed hands-on practical training in core AWS services including EC2, S3, IAM, and CloudWatch. Hosted applications and managed cloud infrastructure.</p>
-                    </div>
-                </div>
-
-                <!-- Deloitte Simulation -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-date">August 2025</span>
-                    <div class="timeline-content">
-                        <h3>Deloitte Australia - Forage</h3>
-                        <h4>Data Analytics Job Simulation</h4>
-                        <p>Completed real-world data analytics tasks: data modelling, visual dashboarding, and forensic analysis using Excel and Tableau.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© 2025 Pratiksha Tripathi | Designed with ❤️ &amp; Code</p>
+    <!-- Parallax BG -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
     </div>
-  </footer>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
-    AOS.init({ duration: 800, once: true, offset: 50 });
+    <!-- Navbar -->
+    <header>
+        <div class="navbar container">
+            <a href="index.html" class="navbar-brand text-gradient">Pratiksha.</a>
+            <ul class="navbar-nav">
+                <li><a href="#about" class="nav-link active">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"
+                        style="display: flex; align-items: center; gap: 8px;">
+                        <span
+                            style="font-size: 0.85rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; font-family: -apple-system, sans-serif;">Theme</span>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </li>
+                <li class="dropdown-wrapper">
+                    <button class="btn-custom btn-resume"
+                        style="padding: 10px 22px; font-size: 0.95rem; font-weight: 800; border: 2px solid var(--text-main); cursor: pointer;">
+                        <span>Resume <i class="fas fa-chevron-down"
+                                style="font-size: 0.8em; margin-left: 4px;"></i></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="resume.pdf" download><i class="fas fa-file-pdf" style="color: #6366f1;"></i> Portfolio
+                            CV</a>
+                        <a href="real_cv.pdf" download><i class="fas fa-file-alt" style="color: #ec4899;"></i> Main
+                            CV</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
 
-    const typed = new Typed("#typed-text", {
-      strings: ["Software Developer", "Data Analytics", "AI Systems"],
-      typeSpeed: 60,
-      backSpeed: 40,
-      backDelay: 1500,
-      loop: true,
-    });
-  </script>
-  <script src="script.js"></script>
+    <main>
+        <!-- Editorial Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-main" data-aos="zoom-out" data-aos-duration="1500">
+                <div class="hero-title-glass-wrapper">
+                    <h1 class="hero-title">PRATIKSHA</h1>
+                </div>
+
+                <div class="typing-container" data-aos="fade-up" data-aos-delay="100">
+                    <span id="typing-text" class="text-gradient"></span>
+                </div>
+
+                <p class="hero-desc" data-aos="fade-up" data-aos-delay="200">
+                    Developing scalable software and data-driven solutions using AI and<br>backend technologies.
+                </p>
+
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#projects" class="btn-custom"><span>View Work</span> <i
+                            class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn-outline"><span>Get In Touch</span></a>
+
+                    <div class="hero-stat-pill">
+                        <div class="stat-icon"><i class="fas fa-terminal"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">250+</span>
+                            <span class="stat-label">Problems Solved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unified Glassmorphic About Card -->
+        <section class="section container" id="about">
+            <div class="about-bento-grid">
+                
+                <!-- 1. Bio Card (Row 1, Col 1) -->
+                <div class="about-card-bento about-bio" data-aos="fade-up">
+                    <h2 class="section-heading" style="margin-bottom: 25px; text-align: left; padding: 0; border: none;">
+                        <span class="text-gradient">About Me.</span>
+                    </h2>
+                    <p style="color: var(--text-main); font-weight: 700; font-size: 1.25rem; margin-bottom: 20px; line-height: 1.5; letter-spacing: -0.5px;">
+                        I am <span class="text-gradient">Pratiksha Tripathi</span>, a Computer Science student with a strong interest in <strong>software development</strong> and <strong>data science</strong>.
+                    </p>
+                    <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem; margin-bottom: 20px;">
+                        I am particularly focused on building <strong>data-driven applications</strong> and understanding how systems work behind the scenes, which has led me to currently deepen my skills in <strong>backend development</strong> and <strong>cloud technologies</strong>.
+                    </p>
+                    <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem;">
+                        My approach is centered around solving real-world problems by combining structured logic, efficient system design, and meaningful use of data, while continuously working towards building <strong>scalable and production-ready applications</strong>.
+                    </p>
+                </div>
+
+                <!-- 2. Portrait Card (Full Height, Col 2) -->
+                <div class="about-card-bento about-portrait" data-aos="fade-left" data-aos-delay="100">
+                    <img src="profile.png?v=1" alt="Pratiksha Tripathi" loading="lazy">
+                </div>
+
+                <!-- 3. Education Card (Row 2, Col 1) -->
+                <div class="about-card-bento about-edu" data-aos="fade-right" data-aos-delay="200">
+                    <div class="edu-icon-box">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="edu-info">
+                        <span class="stats-label" style="font-size: 0.75rem;">Education</span>
+                        <h4 style="font-size: 1.25rem;">Lovely Professional University</h4>
+                        <p class="edu-subtitle" style="font-size: 0.9rem;">B.Tech CSE</p>
+                    </div>
+                    
+                    <!-- Merged Stats -->
+                    <div class="edu-cgpa-badge">
+                        <span class="stats-label" style="font-size: 0.65rem; letter-spacing: 1px;">CGPA</span>
+                        <strong class="stats-value">8.46<span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">/10</span></strong>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Categorized Skills Section (Bento Design) -->
+        <section class="section container" id="skills">
+            <h2 class="section-heading" data-aos="fade-right"><span class="text-gradient">Technical Arsenal</span></h2>
+
+            <div class="skills-bento-grid">
+
+                <!-- 1. Languages (Tall) -->
+                <div class="bento-card bento-languages" data-aos="fade-up">
+                    <h3 class="bento-title">Core Languages</h3>
+                    <div class="bento-tech-list">
+                        <div class="tech-tag"><i class="devicon-cplusplus-plain colored"></i> C++</div>
+                        <div class="tech-tag"><i class="devicon-python-plain colored"></i> Python</div>
+                        <div class="tech-tag"><i class="devicon-java-plain colored"></i> Java</div>
+                        <div class="tech-tag"><i class="devicon-html5-plain colored"></i> HTML5</div>
+                        <div class="tech-tag"><i class="devicon-css3-plain colored"></i> CSS3</div>
+                        <div class="tech-tag"><i class="devicon-mysql-plain colored"></i> SQL</div>
+                    </div>
+                </div>
+
+                <!-- 2. Frameworks & Backend (Wide) -->
+                <div class="bento-card bento-backend" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="bento-title">Fullstack & Backend</h3>
+                    <div class="bento-tech-list">
+                        <div class="tech-tag"><i class="devicon-django-plain colored"></i> Django</div>
+                        <div class="tech-tag"><i class="devicon-flask-original colored"></i> Flask</div>
+                        <div class="tech-tag"><i class="fas fa-project-diagram" style="color: #34d399;"></i> REST APIs</div>
+                        <div class="tech-tag"><i class="fas fa-database" style="color: #60a5fa;"></i> Data Structures</div>
+                    </div>
+                    <p class="bento-desc">Specializing in building robust systems and efficient data processing pipelines.</p>
+                </div>
+
+                <!-- 3. Data Science -->
+                <div class="bento-card bento-ds" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="bento-title">Data Science</h3>
+                    <div class="bento-tech-list">
+                        <div class="tech-tag"><i class="devicon-pandas-original colored"></i> Pandas</div>
+                        <div class="tech-tag"><i class="devicon-numpy-original colored"></i> NumPy</div>
+                        <div class="tech-tag"><i class="devicon-scikitlearn-plain colored"></i> Scikit-learn</div>
+                        <div class="tech-tag"><i class="fas fa-chart-line" style="color: #fb923c;"></i> Matplotlib</div>
+                    </div>
+                </div>
+
+                <!-- 4. Tools & Cloud -->
+                <div class="bento-card bento-tools" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="bento-title">Tools & Cloud</h3>
+                    <div class="bento-tech-list">
+                        <div class="tech-tag"><i class="devicon-amazonwebservices-original colored"></i> AWS</div>
+                        <div class="tech-tag"><i class="devicon-git-plain colored"></i> Git</div>
+                        <div class="tech-tag"><i class="devicon-github-original colored"></i> GitHub</div>
+                        <div class="tech-tag"><i class="fas fa-file-excel" style="color: #1d6f42;"></i> Excel</div>
+                        <div class="tech-tag"><i class="fas fa-chart-bar" style="color: #facc15;"></i> Power BI</div>
+                        <div class="tech-tag"><i class="devicon-jupyter-plain colored"></i> Jupyter</div>
+                    </div>
+                </div>
+
+                <!-- 5. Soft Skills (Footer Strip) -->
+                <div class="bento-card bento-soft" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="bento-title" style="text-align: center; margin-bottom: 30px;">Soft Skills</h3>
+                    <div class="soft-skills-strip">
+                        <span>Problem-Solving</span>
+                        <span class="dot"></span>
+                        <span>Team Leadership</span>
+                        <span class="dot"></span>
+                        <span>Adaptability</span>
+                        <span class="dot"></span>
+                        <span>Strategic Communication</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Training Timeline Section -->
+        <section class="section container" id="experience">
+            <h2 class="section-heading" data-aos="fade-right"><span class="text-gradient">Training</span>
+            </h2>
+
+            <div class="timeline-section" style="display: flex; justify-content: center;">
+
+                <!-- Experience/Training Column -->
+                <div class="timeline-column" data-aos="fade-up" style="max-width: 600px; width: 100%;">
+                    <div class="timeline">
+
+                        <!-- Summer Training -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">June 2025 - July 2025</span>
+                            <div class="timeline-content">
+                                <h3>Cipher Schools</h3>
+                                <h4>Cloud Computing - AWS Summer Training</h4>
+                                <p>Completed hands-on practical training in core AWS services including EC2, S3, IAM,
+                                    and CloudWatch. Hosted applications and managed cloud infrastructure.</p>
+                            </div>
+                        </div>
+
+                        <!-- Deloitte Simulation -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">August 2025</span>
+                            <div class="timeline-content">
+                                <h3>Deloitte Australia - Forage</h3>
+                                <h4>Data Analytics Job Simulation</h4>
+                                <p>Completed real-world data analytics tasks: data modelling, visual dashboarding, and
+                                    forensic analysis using Excel and Tableau.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects section container" id="projects">
+            <h2 class="section-heading" data-aos="fade-right"><span class="text-gradient">Featured Projects</span></h2>
+            <p class="section-tagline" data-aos="fade-up" style="color: var(--accent-blue); font-size: 1.8rem; font-weight: 800; margin-top: -30px; margin-bottom: 60px; letter-spacing: -0.5px; opacity: 0.9;">Architecting Scalable Solutions with Precision and Innovation.</p>
+
+            <!-- Project Filters -->
+            <div class="projects-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI / ML</button>
+                <button class="filter-btn" data-filter="web">Web & Cloud</button>
+            </div>
+
+            <!-- Featured Project 1 -->
+            <div class="featured-project" data-aos="fade-up" data-category="ai web">
+                <div class="project-content">
+                    <p class="project-overline text-gradient">Real-Time AI System</p>
+                    <h3 class="project-title">Smart Campus Attendance System</h3>
+                    <div class="project-desc">
+                        <p>Designed and documented an end-to-end full-stack smart campus attendance system. It utilizes
+                            real-time AI-based face recognition to automate and digitize classroom attendance,
+                            integrated seamlessly with a real-time analytical dashboard for tracking trends.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>PostgreSQL</li>
+                        <li>DeepFace</li>
+                    </ul>
+                    <div class="project-links" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="https://github.com/pratikshatripathi13/University-Smart-Attendance-Management-System-.git"
+                            target="_blank" aria-label="GitHub Link" class="view-code-card">
+                            <span class="emoji">🤓👉</span>
+                            <span>View Code</span>
+                            <i class="fab fa-github" style="margin-left: 10px;"></i>
+                        </a>
+                        <a href="https://university-smart-attendance-management.onrender.com/" target="_blank"
+                            aria-label="Demo Link" class="view-code-card"
+                            style="border-color: var(--accent-blue); background: rgba(0, 242, 254, 0.05);">
+                            <span class="emoji">🚀👉</span>
+                            <span>Live Demo</span>
+                            <i class="fas fa-external-link-alt" style="margin-left: 10px;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="smart_attendance.png" alt="Smart Campus Attendance System" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Featured Project 2 -->
+            <div class="featured-project" data-aos="fade-up" data-category="ai">
+                <div class="project-content">
+                    <p class="project-overline text-gradient">Machine Learning Pipeline</p>
+                    <h3 class="project-title">Flight Price Predictive Analytics</h3>
+                    <div class="project-desc">
+                        <p>Built a comprehensive machine learning pipeline that significantly improves flight price
+                            prediction accuracy by 25%. This was achieved through advanced feature engineering, label
+                            encoding, and a highly scalable real-time inference architecture built with Python and
+                            Pandas.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>Python</li>
+                        <li>Pandas</li>
+                        <li>Scikit-Learn</li>
+                        <li>Streamlit</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/pratikshatripathi13/FLIGHT-PRICE-PREDICTIVE-ANALYSIS.git"
+                            target="_blank" aria-label="GitHub Link" class="view-code-card">
+                            <span class="emoji">🤓👉</span>
+                            <span>View Code</span>
+                            <i class="fab fa-github" style="margin-left: 10px;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80"
+                        alt="Flight Price Predictive Analytics" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Featured Project 3: CI/CD Portfolio -->
+            <div class="featured-project" data-aos="fade-up" data-category="web">
+                <div class="project-content">
+                    <p class="project-overline text-gradient">Cloud DevOps</p>
+                    <h3 class="project-title">CI/CD Portfolio Pipeline</h3>
+                    <div class="project-desc">
+                        <p>Deployed a personal portfolio using HTML, CSS, and AWS S3 static hosting ensuring reliable
+                            cloud availability. Automated CI/CD pipelines via GitHub Actions for continuous integration
+                            and streamlined deployments to AWS S3 with minimal manual intervention, using structured
+                            Git workflows for maintainability.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>HTML / CSS</li>
+                        <li>AWS S3</li>
+                        <li>GitHub Actions</li>
+                        <li>Git</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/pratikshatripathi13" target="_blank" aria-label="GitHub Link"
+                            class="view-code-card">
+                            <span class="emoji">😎👉</span>
+                            <span>View Code</span>
+                            <i class="fab fa-github" style="margin-left: 10px;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=800&q=80"
+                        alt="CI/CD Portfolio Pipeline" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Featured Project 4: Government Scheme RAG -->
+            <div class="featured-project" data-aos="fade-up" data-category="ai">
+                <div class="project-content">
+                    <p class="project-overline text-gradient">Generative AI · RAG</p>
+                    <h3 class="project-title">Government Scheme RAG System</h3>
+                    <div class="project-desc">
+                        <p>Built a Retrieval-Augmented Generation (RAG) pipeline that lets citizens query government
+                            schemes in natural language. The system indexes scheme documents, retrieves the most
+                            relevant chunks via vector similarity search, and feeds them as context to an LLM
+                            to generate accurate, grounded answers in real-time — bridging the gap between citizens
+                            and public welfare information.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>Python</li>
+                        <li>LangChain</li>
+                        <li>Vector Search</li>
+                        <li>LLM</li>
+                        <li>RAG Pipeline</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/pratikshatripathi13/government_scheme_RAG.git" target="_blank"
+                            aria-label="GitHub Link" class="view-code-card">
+                            <span class="emoji">🤓👉</span>
+                            <span>View Code</span>
+                            <i class="fab fa-github" style="margin-left: 10px;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                        alt="Government Scheme RAG System" loading="lazy">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section container" id="certificates">
+
+            <h2 class="section-heading" data-aos="fade-right"><span class="text-gradient">Certificates &amp;
+                    Achievements</span></h2>
+            <p class="certs-intro" data-aos="fade-up"
+                style="font-size: 1.15rem; font-weight: 500; color: var(--text-muted); line-height: 1.8; margin-bottom: 60px;">
+                A collection of professional certifications, virtual internships, and recognition awards I've earned
+                across Cloud Computing, Data Analytics, and Software Engineering.
+            </p>
+
+
+            <div class="certs-grid" style="margin-top: 60px;">
+
+                <!-- Oracle Certified Foundations Associate -->
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="cert-icon-wrap cert-oracle"
+                        style="background: rgba(248, 0, 0, 0.05); color: #f80000; border-color: rgba(248, 0, 0, 0.15);">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="cert-body">
+                        <span class="cert-issuer">Oracle University</span>
+                        <h3 class="cert-title">Oracle Certified Foundations Associate</h3>
+                        <p class="cert-desc">Certified in Oracle Data Platform 2025 Foundations, demonstrating knowledge
+                            in database concepts and Oracle cloud services.</p>
+                        <div class="cert-tags">
+                            <span>Oracle</span><span>Database</span><span>Data Platform</span>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="cert-badge"><i class="fas fa-certificate"></i> Mar 2026</span>
+                        <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=836C4AE886CCA4C25283F324BD0194FB75EBB6D5D1791974DFC6BA6A78C5E3DB" target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Excel to Power BI – Coursera -->
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="cert-icon-wrap cert-coursera">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="cert-body">
+                        <span class="cert-issuer">Coursera</span>
+                        <h3 class="cert-title">From Excel to Power BI</h3>
+                        <p class="cert-desc">Mastered data visualization techniques and built interactive dashboards
+                            transitioning from Excel to Power BI for business intelligence reporting.</p>
+                        <div class="cert-tags">
+                            <span>Power BI</span><span>Excel</span><span>Data Viz</span>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="cert-badge"><i class="fas fa-certificate"></i> Sep 2025</span>
+                        <a href="https://www.coursera.org" target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Deloitte Forage -->
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-icon-wrap cert-deloitte">
+                        <i class="fas fa-building-columns"></i>
+                    </div>
+                    <div class="cert-body">
+                        <span class="cert-issuer">Deloitte Australia — Forage</span>
+                        <h3 class="cert-title">Data Analytics Job Simulation</h3>
+                        <p class="cert-desc">Completed real-world data analytics tasks: data modelling, dashboarding,
+                            and forensic analysis using Excel & Tableau.</p>
+                        <div class="cert-tags">
+                            <span>Data Analytics</span><span>Tableau</span><span>Excel</span>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="cert-badge"><i class="fas fa-certificate"></i> Aug 2025</span>
+                        <a href="https://www.theforage.com" target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cloud Computing – NPTEL -->
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="cert-icon-wrap cert-nptel">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="cert-body">
+                        <span class="cert-issuer">NPTEL</span>
+                        <h3 class="cert-title">Cloud Computing</h3>
+                        <p class="cert-desc">Completed a comprehensive NPTEL course on Cloud Computing fundamentals
+                            covering virtualization, cloud service models, and distributed systems.</p>
+                        <div class="cert-tags">
+                            <span>Cloud</span><span>Virtualization</span><span>AWS</span>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="cert-badge"><i class="fas fa-certificate"></i> Jan 2025</span>
+                        <a href="https://nptel.ac.in" target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Python Development Micro Degree – Eyodya -->
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-icon-wrap cert-hackerrank">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="cert-body">
+                        <span class="cert-issuer">Eyodya</span>
+                        <h3 class="cert-title">Python Development Micro Degree</h3>
+                        <p class="cert-desc">Completed an intensive Python development micro-degree covering core
+                            programming concepts, OOP, libraries, and real-world project development.</p>
+                        <div class="cert-tags">
+                            <span>Python</span><span>OOP</span><span>Libraries</span>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="cert-badge"><i class="fas fa-certificate"></i> Mar 2024</span>
+                        <a href="https://www.eyodya.com" target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Programming Foundations JS HTML CSS – Coursera -->
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="cert-icon-wrap cert-coursera">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="cert-body">
+                        <span class="cert-issuer">Coursera</span>
+                        <h3 class="cert-title">Programming Foundations with JS, HTML & CSS</h3>
+                        <p class="cert-desc">Learned the foundations of full-stack web development including HTML
+                            structure, CSS styling, and JavaScript interactivity through hands-on projects.</p>
+                        <div class="cert-tags">
+                            <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                        </div>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="cert-badge"><i class="fas fa-certificate"></i> Feb 2024</span>
+                        <a href="https://www.coursera.org" target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i> View
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="section container" id="achievements" style="padding-top: 0;">
+            <h2 class="section-heading" data-aos="fade-right"
+                style="font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); letter-spacing: -1px; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 20px;">
+                <span style="font-style: italic; font-weight: 600;" class="text-gradient">Achievements.</span>
+            </h2>
+
+            <div class="achievements-list">
+
+                <!-- Infosys STEM Scholar -->
+                <div class="achievement-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="ach-icon-wrap"
+                        style="background: rgba(255, 183, 3, 0.05); color: #ffb703; border-color: rgba(255, 183, 3, 0.15);">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="ach-body">
+                        <span class="ach-issuer">INFOSYS FOUNDATION</span>
+                        <h3 class="ach-title">STEM Scholar Award</h3>
+                        <p class="ach-desc">Recognised for academic excellence & technical aptitude in CS</p>
+                    </div>
+                </div>
+
+                <!-- HackerRank Python 4-Star -->
+                <div class="achievement-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ach-icon-wrap"
+                        style="background: rgba(168, 85, 247, 0.05); color: var(--accent-purple); border-color: rgba(168, 85, 247, 0.15);">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="ach-body">
+                        <span class="ach-issuer">HACKERRANK</span>
+                        <h3 class="ach-title">4-Star Python Badge</h3>
+                        <p class="ach-desc">Advanced-level Python challenges · Mar 2024</p>
+                        <a href="https://www.hackerrank.com/profile/pratikshatripat1" target="_blank"
+                            class="ach-link">View Profile <i class="fas fa-external-link-alt"
+                                style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                    </div>
+                </div>
+
+                <!-- 250+ Coding Problems -->
+                <div class="achievement-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="ach-icon-wrap"
+                        style="background: rgba(0, 242, 254, 0.05); color: var(--accent-blue); border-color: rgba(0, 242, 254, 0.15);">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="ach-body">
+                        <span class="ach-issuer">LEETCODE · HACKERRANK · GFG</span>
+                        <h3 class="ach-title">250+ Problems Solved</h3>
+                        <p class="ach-desc">Consistent DSA & algorithmic problem-solving across platforms</p>
+                        <div style="margin-top: 10px; display: flex; gap: 15px;">
+                            <a href="https://leetcode.com/u/pratikshatripathi/" target="_blank"
+                                class="ach-link">LeetCode <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                            <a href="https://www.hackerrank.com/profile/pratikshatripat1" target="_blank"
+                                class="ach-link">HackerRank <i class="fas fa-external-link-alt"
+                                    style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Open Source GSSoC -->
+                <div class="achievement-item" style="border-bottom: none;" data-aos="fade-up" data-aos-delay="300">
+                    <div class="ach-icon-wrap"
+                        style="background: rgba(147, 165, 207, 0.05); color: #93a5cf; border-color: rgba(147, 165, 207, 0.15);">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="ach-body">
+                        <span class="ach-issuer">GSSOC — GIRL SCRIPT SUMMER OF CODE</span>
+                        <h3 class="ach-title">Open Source Contributor Badge</h3>
+                        <p class="ach-desc">Contributed to open source and received contributor badge · Sep 2025</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section container" id="contact" style="width: 100%; padding-top: 30px; padding-bottom: 30px;">
+            <div class="contact-section" data-aos="zoom-in" data-aos-duration="800">
+                <!-- Compact Heading -->
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h2
+                        style="font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.05; margin-bottom: 12px; color: var(--text-main); font-weight: 900; letter-spacing: -1.5px;">
+                        Let's build <span style="color: var(--accent-blue);">something great.</span>
+                    </h2>
+                    <p
+                        style="max-width: 550px; margin: 0 auto; color: var(--text-muted); font-size: 1rem; line-height: 1.6;">
+                        Open to roles, internships & collaborations. Let's connect!
+                    </p>
+                </div>
+
+                <!-- Two Column Grid: Tokens Left | Form Right -->
+                <div class="contact-layout-grid">
+                    <!-- Left Column: Location + Social Tokens -->
+                    <div class="contact-info-wrap" data-aos="fade-right" data-aos-delay="100">
+
+                        <!-- Location Card -->
+                        <div
+                            style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px 22px; display: flex; align-items: center; gap: 15px; backdrop-filter: blur(20px); box-shadow: 0 5px 20px rgba(0,0,0,0.2); margin-bottom: 15px;">
+                            <div
+                                style="width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg, #00f2fe, #6366f1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-map-marker-alt" style="color: #fff; font-size: 1rem;"></i>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-main); font-size: 0.95rem;">Uttar Pradesh,
+                                    India</strong>
+                                <span
+                                    style="display: inline-block; background: rgba(0, 242, 254, 0.15); color: var(--accent-blue); font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; margin-left: 10px;">Open
+                                    to Remote</span>
+                            </div>
+                        </div>
+
+                        <!-- Social Tokens (Compact Horizontal Rows) -->
+                        <div class="social-token-grid" style="margin-top: 0;">
+                            <a href="mailto:pratikshatripathi782@gmail.com" class="social-token token-email">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span>Email</span>
+                                    <p class="token-action">pratikshatripathi782@gmail.com</p>
+                                </div>
+                            </a>
+                            <a href="https://linkedin.com/in/pratikshatripathi13/" target="_blank"
+                                class="social-token token-linkedin">
+                                <i class="fab fa-linkedin"></i>
+                                <div>
+                                    <span>LinkedIn</span>
+                                    <p class="token-action">Professional Network</p>
+                                </div>
+                            </a>
+                            <a href="https://github.com/pratikshatripathi13" target="_blank"
+                                class="social-token token-github">
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <span>GitHub</span>
+                                    <p class="token-action">Code Repository</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Compact Form -->
+                    <div class="contact-form-container" data-aos="fade-left" data-aos-delay="200"
+                        style="padding: 28px; border-radius: 16px;">
+                        <form onsubmit="handleContactSubmit(event)">
+                            <div class="form-group">
+                                <label>Full Name <span>*</span></label>
+                                <input type="text" name="name" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address <span>*</span></label>
+                                <input type="email" name="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Message <span>*</span></label>
+                                <textarea name="message" class="form-control" rows="4"
+                                    placeholder="Tell me about your project or opportunity..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit" id="submitBtn">Send Message <i
+                                    class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Pratiksha Tripathi | Designed with ❤️ &amp; Code</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 50 });
+    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

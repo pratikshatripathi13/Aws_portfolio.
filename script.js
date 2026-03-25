@@ -1,16 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
     /* ═══════════════════════════════════════════════
-       1. PRELOADER
+       1. SPLASH SCREEN (PATH CHOICE)
     ═══════════════════════════════════════════════ */
-    const preloader = document.querySelector('.preloader');
-    if (preloader) {
+    const splashScreen = document.getElementById('splash-screen');
+    
+    // Global path choice function
+    window.choosePath = (theme) => {
+        if (theme === 'light') {
+            document.body.classList.add('light-theme');
+            localStorage.setItem('portfolio-theme', 'light');
+        } else {
+            document.body.classList.remove('light-theme');
+            localStorage.setItem('portfolio-theme', 'dark');
+        }
+        
+        splashScreen.classList.add('hidden');
         setTimeout(() => {
-            preloader.classList.add('loaded');
-            setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 800); // Wait for transition
-        }, 1200); // Artificial delay for premium feel
+            splashScreen.style.display = 'none';
+        }, 800);
+    };
+
+    /* Auto-dismiss DISABLED for review - Always show splash on load */
+    /*
+    if (localStorage.getItem('portfolio-theme')) {
+        const saved = localStorage.getItem('portfolio-theme');
+        if (saved === 'light') document.body.classList.add('light-theme');
+        splashScreen.style.display = 'none';
     }
+    */
+    
+    // Smooth transition from saved theme if needed
+    const saved = localStorage.getItem('portfolio-theme');
+    if (saved === 'light') document.body.classList.add('light-theme');
 
     /* ═══════════════════════════════════════════════
        2. CUSTOM CURSOR
@@ -88,6 +109,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ═══════════════════════════════════════════════
+       4. RESUME DROPDOWN TOGGLE
+    ═══════════════════════════════════════════════ */
+    const resumeBtn = document.querySelector('.btn-resume');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    
+    if (resumeBtn && dropdownContent) {
+        resumeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdownContent.classList.toggle('show-dropdown');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!resumeBtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+                dropdownContent.classList.remove('show-dropdown');
+            }
+        });
+    }
+
+    /* ═══════════════════════════════════════════════
        4. PROJECT FILTERING
     ═══════════════════════════════════════════════ */
     const filterBtns = document.querySelectorAll('.filter-btn');
@@ -136,4 +177,76 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* ═══════════════════════════════════════════════
+       6. ROLE FADE ANIMATION (Instead of Typewriter)
+    ═══════════════════════════════════════════════ */
+    const typingText = document.getElementById('typing-text');
+    const roles = ["Software Development", "Data Analysis", "AI Systems", "Cloud Engineering"];
+    let roleIndex = 0;
+
+    function nextRole() {
+        if (!typingText) return;
+        
+        typingText.style.opacity = '0';
+        
+        setTimeout(() => {
+            roleIndex = (roleIndex + 1) % roles.length;
+            typingText.textContent = roles[roleIndex];
+            typingText.style.opacity = '1';
+        }, 600);
+    }
+
+    if (typingText) {
+        typingText.textContent = roles[0];
+        setInterval(nextRole, 3000);
+    }
+
 });
+
+function handleContactSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+    const btn = document.getElementById('submitBtn');
+    if (!btn) return;
+    
+    const originalText = btn.innerHTML;
+
+    // 1. Show Loading State
+    btn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin" style="margin-left:8px;"></i>';
+    btn.style.opacity = '0.7';
+    btn.disabled = true;
+
+    // 2. Prepare Form Data
+    const formData = new FormData(form);
+
+    // 3. Real Submission to Formspree
+    fetch('https://formspree.io/f/xeepqgjz', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            // UI feedback for success
+            btn.innerHTML = 'Message Sent Successfully! <i class="fas fa-check-circle" style="margin-left:8px;"></i>';
+            btn.style.background = '#22c55e'; // Success Green
+            btn.style.boxShadow = '0 10px 30px rgba(34, 197, 94, 0.4)';
+            btn.style.opacity = '1';
+            form.reset();
+        } else {
+            throw new Error('Submission failed');
+        }
+    }).catch(error => {
+        btn.innerHTML = 'Send Failed. Try again! <i class="fas fa-exclamation-triangle" style="margin-left:8px;"></i>';
+        btn.style.background = '#ef4444'; // Error Red
+    }).finally(() => {
+        btn.disabled = false;
+        // Reset button after a few seconds
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = 'var(--gradient-primary)';
+            btn.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+        }, 4000);
+    });
+}
