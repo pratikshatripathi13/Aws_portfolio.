@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
        1. SPLASH SCREEN (PATH CHOICE)
     ═══════════════════════════════════════════════ */
     const splashScreen = document.getElementById('splash-screen');
-    
+
     // Global path choice function
     window.choosePath = (theme) => {
         if (theme === 'light') {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.remove('light-theme');
             localStorage.setItem('portfolio-theme', 'dark');
         }
-        
+
         splashScreen.classList.add('hidden');
         setTimeout(() => {
             splashScreen.style.display = 'none';
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         splashScreen.style.display = 'none';
     }
     */
-    
+
     // Smooth transition from saved theme if needed
     const saved = localStorage.getItem('portfolio-theme');
     if (saved === 'light') document.body.classList.add('light-theme');
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
-            
+
             // Dot moves instantly
             cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
         });
@@ -99,10 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('light-theme');
             const isLight = body.classList.contains('light-theme');
-            
+
             // Save preference
             localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
-            
+
             // Update Icon
             themeToggle.innerHTML = isLight ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
         });
@@ -113,13 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
     ═══════════════════════════════════════════════ */
     const resumeBtn = document.querySelector('.btn-resume');
     const dropdownContent = document.querySelector('.dropdown-content');
-    
+
     if (resumeBtn && dropdownContent) {
         resumeBtn.addEventListener('click', (e) => {
             e.preventDefault();
             dropdownContent.classList.toggle('show-dropdown');
         });
-        
+
         // Close dropdown when clicking outside
         document.addEventListener('click', (e) => {
             if (!resumeBtn.contains(e.target) && !dropdownContent.contains(e.target)) {
@@ -162,13 +162,13 @@ document.addEventListener('DOMContentLoaded', () => {
        5. AVATAR SPEECH BUBBLE LOGIC
     ═══════════════════════════════════════════════ */
     const speechBubble = document.getElementById('avatar-speech');
-    
+
     if (speechBubble) {
         window.addEventListener('scroll', () => {
             const scrollPos = window.scrollY;
-            
+
             if (scrollPos > 300 && scrollPos < 1200) {
-                speechBubble.innerHTML = "I specialize in cloud computing and data analytics.";
+                speechBubble.innerHTML = "I specialize in software architecture and data analytics.";
             } else if (scrollPos >= 1200) {
                 speechBubble.innerHTML = "Here's more about my background and skills!";
             } else {
@@ -181,14 +181,14 @@ document.addEventListener('DOMContentLoaded', () => {
        6. ROLE FADE ANIMATION (Instead of Typewriter)
     ═══════════════════════════════════════════════ */
     const typingText = document.getElementById('typing-text');
-    const roles = ["Software Development", "Data Analysis", "AI Systems", "Cloud Engineering"];
+    const roles = ["Software Development", "Data Analysis", "AI Systems"];
     let roleIndex = 0;
 
     function nextRole() {
         if (!typingText) return;
-        
+
         typingText.style.opacity = '0';
-        
+
         setTimeout(() => {
             roleIndex = (roleIndex + 1) % roles.length;
             typingText.textContent = roles[roleIndex];
@@ -208,7 +208,7 @@ function handleContactSubmit(event) {
     const form = event.target;
     const btn = document.getElementById('submitBtn');
     if (!btn) return;
-    
+
     const originalText = btn.innerHTML;
 
     // 1. Show Loading State
