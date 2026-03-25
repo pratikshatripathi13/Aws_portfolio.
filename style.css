@@ -369,7 +369,8 @@ body.light-theme::before {
 }
 
 .hero-title {
-    font-size: clamp(3.8rem, 12vw, 9.5rem); /* Expanded to 12vw per user request, with 9.5rem safety cap */
+    font-size: clamp(3.8rem, 12vw, 9.5rem);
+    /* Expanded to 12vw per user request, with 9.5rem safety cap */
     font-weight: 900;
     line-height: 0.9;
     letter-spacing: -0.03em;
@@ -563,6 +564,17 @@ body.light-theme .typing-container {
 .stat-icon {
     font-size: 1.3rem;
     color: var(--accent-blue);
+}
+
+.form-label {
+    display: block;
+    font-size: 0.85rem;
+    /* Reduced from 0.9rem or default */
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .stat-number {
@@ -2912,22 +2924,32 @@ footer {
     /* Reduced from 30px */
 }
 
-.contact-main-heading {
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
-    /* Slightly smaller than 4rem to prevent clipping */
-    line-height: 1.05;
-    margin-bottom: 10px;
-    color: var(--text-main);
-    font-weight: 900;
-    letter-spacing: -1.5px;
+h2.contact-main-heading,
+h2.contact-main-heading span {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+}
+
+h2.contact-main-heading {
+    font-size: clamp(1.8rem, 4.5vw, 2.6rem) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 8px !important;
+    color: var(--text-main) !important;
+    letter-spacing: 0 !important;
 }
 
 .contact-sub-tagline {
-    max-width: 550px;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+    max-width: 500px;
     margin: 0 auto;
     color: var(--text-muted);
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.8;
 }
 
 .contact-location-card {
@@ -2979,20 +3001,23 @@ footer {
 .contact-info-column {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    /* Reduced from 20px */
 }
 
 .contact-info-card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    padding: 22px 30px; /* Reduced from 35px 45px */
-    border-radius: 20px; /* Slightly tighter rounding */
+    padding: 16px 24px;
+    /* Reduced from 22px 30px */
+    border-radius: 16px;
+    /* Reduced from 20px */
     display: flex;
     align-items: center;
-    /* Better alignment for larger cards */
-    gap: 25px;
+    gap: 20px;
+    /* Reduced from 25px */
     transition: var(--transition);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -3004,34 +3029,34 @@ footer {
 }
 
 .contact-icon {
-    width: 65px;
-    /* Increased from 45px */
-    height: 65px;
+    width: 48px;
+    /* Reduced from 65px */
+    height: 48px;
     background: var(--gradient-primary);
     color: #fff;
-    border-radius: 18px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    /* Scaled up */
+    font-size: 1.3rem;
+    /* Reduced from 1.8rem */
     flex-shrink: 0;
-    box-shadow: 0 10px 20px rgba(192, 132, 151, 0.2);
+    box-shadow: 0 5px 15px rgba(192, 132, 151, 0.15);
 }
 
 .contact-details h4 {
     color: var(--text-main);
-    font-size: 1.1rem;
-    /* Scaled up from 0.95 */
-    margin-bottom: 8px;
+    font-size: 0.9rem;
+    /* Reduced from 1.1rem */
+    margin-bottom: 4px;
     font-weight: 700;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .contact-details p {
     color: var(--text-main);
-    font-size: 1.35rem;
-    /* Significant increase from 1.1 */
+    font-size: 1.1rem;
+    /* Reduced from 1.35rem */
     font-weight: 600;
     margin: 0;
 }
@@ -3039,9 +3064,10 @@ footer {
 .contact-form-container {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    padding: 50px;
-    /* Increased from 30px */
-    border-radius: 30px;
+    padding: 30px 35px;
+    /* Reduced from 50px */
+    border-radius: 20px;
+    /* Reduced from 30px */
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -3054,19 +3080,20 @@ footer {
 }
 
 .form-group {
-    margin-bottom: 25px;
-    /* Increased vertical spacing */
+    margin-bottom: 18px;
+    /* Reduced from 25px */
 }
 
 /* Scaled up form elements */
 .form-group label {
     display: block;
     color: var(--text-main);
-    opacity: 0.9;
-    font-size: 1.05rem;
-    /* Scaled up from 0.85 */
+    opacity: 0.8;
+    font-size: 0.85rem;
+    /* Reduced from 1.05rem */
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    /* Reduced from 12px */
 }
 
 .form-group label span {
@@ -3077,13 +3104,14 @@ footer {
     width: 100%;
     background: rgba(255, 255, 255, 0.8);
     border: 1px solid var(--glass-border);
-    padding: 18px 24px;
-    /* Increased padding */
-    border-radius: 12px;
+    padding: 12px 20px;
+    /* Reduced from 18px 24px */
+    border-radius: 10px;
+    /* Tighter radius */
     color: var(--text-main);
     font-family: inherit;
-    font-size: 1.15rem;
-    /* Scaled up from 0.95 */
+    font-size: 0.95rem;
+    /* Reduced from 1.15rem */
     transition: var(--transition);
     box-sizing: border-box;
 }
@@ -3099,21 +3127,22 @@ footer {
     background: var(--gradient-primary);
     color: #fff;
     border: none;
-    padding: 20px;
-    /* Scaled up from 14px */
-    border-radius: 14px;
-    font-size: 1.25rem;
-    /* Scaled up from 1rem */
-    font-weight: 800;
+    padding: 14px;
+    /* Reduced from 20px */
+    border-radius: 10px;
+    /* Reduced from 14px */
+    font-size: 1rem;
+    /* Reduced from 1.25rem */
+    font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
     transition: var(--transition);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
-    box-shadow: 0 10px 25px rgba(192, 132, 151, 0.3);
-    margin-top: 15px;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(192, 132, 151, 0.2);
+    margin-top: 10px;
 }
 
 .btn-submit:hover {
@@ -3134,14 +3163,16 @@ footer {
 
 .social-token {
     width: 100%;
-    padding: 18px 22px;
+    padding: 12px 18px;
+    /* Reduced from 18px 22px */
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    border-radius: 16px;
+    border-radius: 12px;
+    /* Reduced from 16px */
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     text-decoration: none !important;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
