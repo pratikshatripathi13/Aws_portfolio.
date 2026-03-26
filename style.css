@@ -2615,6 +2615,13 @@ body.light-theme .section-tagline {
     transition: var(--transition);
 }
 
+.cert-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2; /* Cover the whole card */
+}
+
 .cert-link:hover {
     color: var(--accent-pink);
 }
